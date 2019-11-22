@@ -9,11 +9,10 @@ section .bss
  
 section .text
 start:
-	; inside comment
 	mov		rax, 0x02000004		; write first part of source code
 	mov		rdi, 1
 	lea		rsi, [rel source_code]
-	mov		rdx, 1342
+	mov		rdx, 1324
 	syscall
 	
 	lea		rdi, [rel prefix]	; copy tab db space quote to prefix
@@ -81,11 +80,10 @@ section .data
 	db " ", 10
 	db "section .text", 10
 	db "start:", 10
-	db "	; inside comment", 10
 	db "	mov		rax, 0x02000004		; write first part of source code", 10
 	db "	mov		rdi, 1", 10
 	db "	lea		rsi, [rel source_code]", 10
-	db "	mov		rdx, 1342", 10
+	db "	mov		rdx, 1324", 10
 	db "	syscall", 10
 	db "	", 10
 	db "	lea		rdi, [rel prefix]	; copy tab db space quote to prefix", 10

@@ -1,12 +1,12 @@
 AS=nasm
 ASFLAGS=-f macho64
-NAME=Colleen
+NAME=Colleen Grace
 RM=rm -rf
+
+all: $(NAME)
 
 $(NAME): %: %.o
 	ld $< -o $@
-
-all: $(NAME)
 
 clean:
 	$(RM) $(addsuffix .o, $(NAME))
