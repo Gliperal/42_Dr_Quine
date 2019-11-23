@@ -8,6 +8,9 @@ all: $(NAME)
 $(NAME): %: %.o
 	ld $< -o $@
 
+Grace.o:
+	$(AS) -f macho32 Grace.s
+
 clean:
 	$(RM) $(addsuffix .o, $(NAME))
 
