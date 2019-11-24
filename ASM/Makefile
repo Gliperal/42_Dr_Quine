@@ -8,7 +8,7 @@ all: $(NAME)
 $(NAME): %: %.o
 	ld $< -o $@
 
-Grace.o:
+Grace.o: Grace.s
 	$(AS) -f macho32 Grace.s
 
 clean:
